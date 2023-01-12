@@ -12,12 +12,12 @@ const initModels = () =>{
   //  hasMany   => muchos  
   //  belongsTo => pertenece a [sabe que tiene la laave foranea]
 
-  Todos.belongsTo(Users, {as: 'author', foreignKey: 'user_id'}); //una tarea pertenece a un usuario
-  Users.hasMany(Todos, {as: 'task', foreignKey:'user_id'}); //Un usuario tiene muchos tareas
+  Todos.belongsTo(Users, {as: 'author', foreignKey: 'id_user'}); //una tarea pertenece a un usuario
+  Users.hasMany(Todos, {as: 'task', foreignKey:'id_user'}); //Un usuario tiene muchos tareas
 
   //relacion M-M [categorias & tareas]= tabla pivote
   TodosCategories.belongsTo(Todos, {as: 'task', foreignKey:'id_todo'});
-  Todos.hasMany(TodosCategories, {as: 'category', foreignKey: 'id_todo'});
+  Todos.hasMany(TodosCategories, {as: 'categories', foreignKey: 'id_todo'});
 
   TodosCategories.belongsTo(Categories, {as:'category', foreignKey: 'id_category'});
   Categories.hasMany(TodosCategories,{as:'task', foreignKey: 'id_category'});

@@ -13,13 +13,13 @@ const {
 const router = Router();
 //localhost:8000/users
 //controlador
-router.get('/users', getAllUsers);
-router.get('/users/:id', getUserById);
+router.get('/users', getAllUsers);                //l
+router.get('/users/:id', getUserById);            //l
 //obtener un usuario con sus tareas
-router.get('/users/:id/todos', getUserWithTasks);
+router.get('/users/:id/todos', getUserWithTasks); //l
 
-router.post('/users', createUser);
-router.put('/users/:id', updateUsers);
-router.delete('/users/:id', deleteUsers);
+router.post('/users', createUser);                //l
+router.put('/users/:id', updateUsers);            //??
+router.delete('/users/:id', deleteUsers);         //l
 
 module.exports = router;

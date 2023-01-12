@@ -11,11 +11,11 @@ const users = [
 ];
 
 const todos = [
-  {title: 'fotos', description: 'capturar foros del picnick', userId: 1},
-  {title: 'conducir', description: 'ir de paseo a la casa de campo', userId: 2},
-  {title: 'modelo', description: 'llevar prendas extras', userId: 3},
-  {title: 'molestar', userId: 2},
-  {title: 'besar', description: 'besos apacionados con el fotografo', userId: 3},
+  {title: 'fotos', description: 'capturar foros del picnick', id_user: 1},
+  {title: 'conducir', description: 'ir de paseo a la casa de campo', id_user: 2},
+  {title: 'modelo', description: 'llevar prendas extras', id_user: 3},
+  {title: 'molestar', id_user: 2},
+  {title: 'besar', description: 'besos apacionados con el fotografo', id_user: 3},
 ];
 
 const categories = [
@@ -32,17 +32,17 @@ const categories = [
 ];
 
 const todosCategories = [
-  {idCategory: 1, idTodo: 1},
-  {idCategory: 2, idTodo: 1},
-  {idCategory: 4, idTodo: 1},
-  {idCategory: 1, idTodo: 2},
-  {idCategory: 7, idTodo: 2},
-  {idCategory: 10, idTodo: 2},
-  {idCategory: 3, idTodo: 2},
-  {idCategory: 5, idTodo: 3},
-  {idCategory: 6, idTodo: 3},
-  {idCategory: 1, idTodo: 4},
-  {idCategory: 3, idTodo: 4}
+  {id_category: 1, id_todo: 1},
+  {id_category: 2, id_todo: 1},
+  {id_category: 4, id_todo: 1},
+  {id_category: 1, id_todo: 2},
+  {id_category: 7, id_todo: 2},
+  {id_category: 10, id_todo: 2},
+  {id_category: 3, id_todo: 2},
+  {id_category: 5, id_todo: 3},
+  {id_category: 6, id_todo: 3},
+  {id_category: 1, id_todo: 4},
+  {id_category: 3, id_todo: 4}
 ];
 
 //sincronizar la DB

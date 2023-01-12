@@ -4,7 +4,7 @@ const Todos = require('../models/todos.model');
 //planos para replicar con comportamiento iguales
 class UserServices {
   //metodos estaticos
-  static async getAll () {
+  static async getAll () {                            //l
     try {
       const result = await Users.findAll();
       return result;
@@ -13,7 +13,7 @@ class UserServices {
     }
   }
 
-  static async getById (id){
+  static async getById (id){                         //l
     try {
       const result = await Users.findByPk(id);
       return result;
@@ -22,7 +22,7 @@ class UserServices {
     }
   }
 //obtener una relacion
-  static async getWithTasks (id) {
+  static async getWithTasks (id) {                   //l
     try {
       const result = await Users.findOne({
         where:     {id},
@@ -42,9 +42,7 @@ class UserServices {
     }
   }
 
-  //traer tarea con categorias
-
-  static async create (user) {
+  static async create (user) {                     //l
     try {
       const result = await Users.create(user);
       return result;
