@@ -29,7 +29,7 @@ const categories = [
   {name: 'lectura'},//8
   {name: 'cocina'},//9
   {name: 'entretenimiento'},//10
-];
+]; 
 
 const todosCategories = [
   {id_category: 1, id_todo: 1},
