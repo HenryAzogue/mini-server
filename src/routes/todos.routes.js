@@ -15,12 +15,12 @@ const router = Router();
 //localhost:8000/users
 //controlador         //se ejecuta de izquierda a derecha
 router.get('/todos', authMiddleware,getAllTodo);                         //
-router.get('/todos/:id', getTodoById);                     //
+router.get('/todos/:id', authMiddleware, getTodoById);                     //
 //obtener un usuario con sus tareas 
-router.get('/todos/:id/categories', getTodosWithCategories);  //paso3
+router.get('/todos/:id/categories', authMiddleware, getTodosWithCategories);  //paso3
 
-router.post('/todos', createTodo);                         //
-router.put('/todos/:id', updateTodo);                     //
-router.delete('/todos/:id', deleteTodo);                  //
+router.post('/todos', authMiddleware, createTodo);                         //
+router.put('/todos/:id', authMiddleware, updateTodo);                     //
+router.delete('/todos/:id', authMiddleware, deleteTodo);                  //
 
 module.exports = router;

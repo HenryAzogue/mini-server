@@ -8,7 +8,7 @@ const authRoutes = require('./routes/auth.routes');
 //import cors
 const cors = require('cors');
 
-
+console.log(process.env);
 //crear instancia de express
 const app = express();
 app.use(express.json());

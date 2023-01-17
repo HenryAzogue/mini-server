@@ -12,7 +12,7 @@ const authMiddleware = (req, res, next) =>{//next, para que vaya al siguiente mi
   const decode = jwt.verify(
     token, 
     'Laura Marano', 
-    {algorithms: 'HS512', expiresIn: '1m'},
+    {algorithms: 'HS512'},
     (err, decode)=>{
       if(err){
         res.status(400).json(
