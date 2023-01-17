@@ -17,7 +17,7 @@ const userLogin = async (req, res) => {
       
       //firmamos el nuevo token
               //dat--palabra reservada-algoritmo de codificacion
-      const token = jwt.sign(data, 'Laura Marano', {algorithm: 'HS512'});
+      const token = jwt.sign(data, 'Laura Marano', {algorithm: 'HS512', expiresIn: '1m'});
       data.token = token;
       console.log(data);
       res.json(data);

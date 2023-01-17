@@ -7,13 +7,14 @@ const {
   deleteTodo,
   getTodosWithCategories
 } = require('../controllers/todos.controller');
+const authMiddleware = require('../middlwares/auth.middleware');
 
 
 //instancia del router
 const router = Router();
 //localhost:8000/users
-//controlador
-router.get('/todos', getAllTodo);                         //
+//controlador         //se ejecuta de izquierda a derecha
+router.get('/todos', authMiddleware,getAllTodo);                         //
 router.get('/todos/:id', getTodoById);                     //
 //obtener un usuario con sus tareas 
 router.get('/todos/:id/categories', getTodosWithCategories);  //paso3
