@@ -5,6 +5,7 @@ const initModels = require('./models/init.model');
 const userRoutes = require('./routes/users.routes');
 const todoRoutes = require('./routes/todos.routes');
 const authRoutes = require('./routes/auth.routes');
+require('dotenv').config();
 //import cors
 const cors = require('cors');
 
@@ -14,7 +15,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());//permite hacer cualquier tipo de peticiones desde el front
 
-const PORT = 8000;
+const PORT = process.env.PORT;
 
 
 

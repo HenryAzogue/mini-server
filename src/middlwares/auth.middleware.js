@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-
+require('dotenv').config();
 
 //vamos a validar el Token
 const authMiddleware = (req, res, next) =>{//next, para que vaya al siguiente middleware
@@ -11,8 +11,8 @@ const authMiddleware = (req, res, next) =>{//next, para que vaya al siguiente mi
             //token--palabra Clave---algoritmo de codificacion
   const decode = jwt.verify(
     token, 
-    'Laura Marano', 
-    {algorithms: 'HS512'},
+    process.env.JWT_SECRET, 
+    {algorithms: 'HS512'},//decodificamos 
     (err, decode)=>{
       if(err){
         res.status(400).json(

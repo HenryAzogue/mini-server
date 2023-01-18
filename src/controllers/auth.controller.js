@@ -2,6 +2,7 @@
 //PASO 2
 const jwt = require('jsonwebtoken');
 const AuthService = require('../services/auth.services');
+require('dotenv').config();
 
 const userLogin = async (req, res) => {
   try {
@@ -17,7 +18,7 @@ const userLogin = async (req, res) => {
       
       //firmamos el nuevo token
               //dat--palabra reservada-algoritmo de codificacion
-      const token = jwt.sign(data, 'Laura Marano', {algorithm: 'HS512', expiresIn: '1m'});
+      const token = jwt.sign(data, process.env.JWT_SECRET, {algorithm: 'HS512', expiresIn: '1m'});
       data.token = token;
       console.log(data);
       res.json(data);
